@@ -1,0 +1,378 @@
+{% extends 'main/base.html' %} {%load static%}
+<!---->
+{% block content %}
+
+
+<div id="id_carousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#id_carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#id_carousel" data-slide-to="1"></li>
+        <li data-target="#id_carousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="d-block w-100" src="{{ carossel.frst_image.url }}" alt="First slide">
+            <div class="carousel-caption d-none d-md-block">
+                <h5 class="animate__animated animate__fadeInDown" style="animation-delay: 1.5s"></h5>
+                <p class="animate__animated animate__fadeInDown" style="animation-delay: 1s;">{{ carossel.descrpt_1}}</p>
+                <a class="btn btn-dark animate__animated animate__fadeInDown" style="animation-delay: 0.5s;" href="#">Savoir plus</a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="{{ carossel.scd_image.url }}" alt="Second slide">
+            <div class="carousel-caption d-none d-md-block">
+                <h5 class="animate__animated animate__fadeInDown" style="animation-delay: 1.5s">{{ carossel.title_2}}</h5>
+                <p class="animate__animated animate__fadeInDown" style="animation-delay: 1s;">{{ carossel.descrpt_2}}</p>
+                <a class="btn btn-dark animate__animated animate__fadeInDown" style="animation-delay: 0.5s;" href="#">Savoir plus</a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="{{ carossel.trd_image.url}}" alt="Second slide">
+            <div class="carousel-caption d-none d-md-block">
+                <h5 class="animate__animated animate__fadeInDown" style="animation-delay: 1.5s">{{ carossel.title_3}}</h5>
+                <p class="animate__animated animate__fadeInDown" style="animation-delay: 1s;">{{ carossel.descrpt_3}}</p>
+                <a class="btn btn-dark animate__animated animate__fadeInDown" style="animation-delay: 0.5s;" href="#">Savoir plus</a>
+            </div>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#id_carousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#id_carousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+
+<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<div id="about" class=" offset container mt-3 mb-5">
+    <div class="post-heading text-center">
+        <h3 class="display-4 font-weight-bold" style="color:#18223d;"> A propos de
+            <span class="display-4 font-weight-bold" style="color:#f3ad3b !important">Nous</span>
+        </h3>
+        <hr class="w-50 mx-auto pb-5 ">
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-12">
+            <img src="{% static 'main/images/cibelle.jpg' %}" class="imageCF container-fluid ">
+        </div>
+        <div class="col-lg col-md-6 col-12  " style="margin-top: 100px; ">
+            <div class="about-widget-heading ">
+                <h2>Qui nous sommes ?</h2>
+            </div>
+            <p>
+                {{ home_page.about_description}}
+            </p>
+            <a class="" href="{% url 'presentation'%} " class="container">
+                <button class="btn aboutButton ">
+                    <span>savoir plus</span>
+                </button>
+            </a>
+        </div>
+    </div>
+
+</div>
+<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<div class="banier-valor container-fluid">
+
+    <div class="row">
+
+        <div class=" col-lg-4 col-md-6 col-12 text-center content-text layout-banier ">
+            <h2>Découvrez Le Sommet </h2>
+            <p>Nos clients ont contacté notre équipe pour que nous les accompagnons dans le cadre de la transformation<br> digitale de leur entreprise ou pour optimiser les actions marketing.</p>
+
+        </div>
+    </div>
+
+
+
+</div>
+<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<div class=" newLetter container-fluid ">
+    <div class="row">
+
+        <div class="content-text col-lg-6 col-md-12 col-12">
+            <h2 class="">Bulletin d'information</h2>
+            <p> s'abonner a mon bulletin d'information pour recevoir les dernieres informations</p>
+        </div>
+        <div class="content-form col-lg-6 col-md-12 col-12">
+            <form class="form-inline">
+                <div class="form-group mx-sm-3 mb-2">
+                    <input type="email" class="form-control" id="email" placeholder="Entrer l'email">
+                </div>
+                <button type="submit" class="btn btn-primary">S'abonner </button>
+            </form>
+        </div>
+
+    </div>
+
+
+
+</div>
+<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<div class="bg-service container-fluid">
+    <div id="service" class=" offset container mt-3 mb-5">
+        <div class="post-heading text-center">
+            <h3 class="display-4 font-weight-bold" style="color:#18223d;"> Nos
+                <span class="display-4 font-weight-bold" style="color:#f3ad3b !important">Services</span>
+            </h3>
+            <hr class="w-50 mx-auto pb-5 ">
+        </div>
+
+        <div class="container">
+            <div class="row">
+                {% for service in service %}
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card">
+                        <img class="card-img-top" src="{{service.image.url}}" alt="image" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title" style="font-weight: bolder;">{{service.name }}</h4>
+                            <p class="card-text">{{service.descriptionBref}}</p>
+                            <a href="{% url 'services'%}" class=" btn aboutButton " style="position:relative;left: 20%;"><span>Savoir plus</span></a>
+                        </div>
+                    </div>
+
+                </div>
+                {% endfor %}
+
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<div class=" degra-parent">
+
+
+    <div class="first-degra container-fluid jumbotron" style="background: rgba(255, 255, 255, 0.247);background: linear-gradient(180deg, rgba(255, 255, 255, 0.315) 0%, #18223d 70%);">
+        <div class="container parcour">
+
+            <div class="row">
+                <div class="avis col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                    <div class="content">
+                        <div class="content-icon">
+                            <i class="fa fa-users" aria-hidden="true"></i>
+                        </div>
+                        <h3>100+</h3>
+                        <p>
+                            Membres de l'équipe
+                        </p>
+
+                    </div>
+
+                </div>
+                <div class="avis  col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                    <div class="content">
+                        <div class="content-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3>100+</h3>
+                        <p>
+                            Membres de l'équipe
+                        </p>
+
+                    </div>
+
+
+                </div>
+                <div class="avis col-xs-12 col-sm-6 col-md-6 col-lg-3">
+
+                    <div class="content">
+                        <div class="content-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>100+</h3>
+                        <p>
+                            Membres de l'équipe
+                        </p>
+
+                    </div>
+
+                </div>
+                <div class="avis col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                    <div class="content">
+                        <div class="content-icon">
+                            <i class="far fa-thumbs-up"></i>
+                        </div>
+                        <h3>100+</h3>
+                        <p>
+                            Membres de l'équipe
+                        </p>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<div id="degra-fin" class="marc">
+    <div class="container-fluid" style="background-color: #18223d;padding-top: 10px;">
+
+
+        <div id="service" class=" offset container mt-3 mb-5">
+            <div class="post-heading text-center ">
+                <h3 class="display-4 font-weight-bold " style="color:#ffffff; border-bottom: 1px solid #f3ad3b;"> Nos
+                    <span class="display-4 font-weight-bold " style="color:#f3ad3b !important ">Formations </span>
+                </h3>
+                <hr class="w-50 mx-auto pb-5 " style="color: #f3ad3b;">
+                <div class="container ">
+                    <p style="font-family: monospace;font-weight: 300; font-size:15px;margin: 0px 0px 10p 0px; top: 0; color: #ffffff;">Découvrez nos derniers articles de blog sur des thématiques telles que le marketing digital, la transformation numérique, le e-commerce, le référencement naturel, la publicité en ligne ou encore Zoho.</p>
+
+                </div>
+            </div>
+
+            <div class="container ">
+                <div class="row ">
+                    {% for format in formation %}
+                    <div class="col-lg-4 col-md-6 col-12 ">
+                        <div class="card " style="background: rgba(255, 255, 255, 0.397);">
+                            <img class="card-img-top " src="{{format.image.url}} " alt="image " style="width:100% ">
+                            <div class="card-body ">
+                                <h4 class="card-title " style="font-weight: bolder;">{{format.name }}</h4>
+                                <p class="card-text ">{{format.descriptionBref}}</p>
+                                <a href="{% url 'formations'%}" class=" btn aboutButton " style="position:relative;left: 20%; "><span>Savoir plus</span></a>
+                            </div>
+                        </div>
+
+                    </div>
+                    {% endfor %}
+
+                </div>
+
+
+            </div>
+
+        </div>
+        <div class="container-fluid" style="background: rgba(255, 255, 255);background: linear-gradient(180deg, #18223d 2%, rgba(255, 255, 255) 70%);height: 100px;width: 100%;"></div>
+    </div>
+</div>
+
+
+
+<div class="container" id="projet_real">
+
+
+    <div class=" offset container mt-3 mb-5">
+        <div class="post-heading text-center ">
+            <h3 class="display-4 font-weight-bold " style="color: #18223d;"> Our
+                <span class="display-4 font-weight-bold " style="color:#f3ad3b !important ">realizations </span>
+            </h3>
+            <hr class="w-50 mx-auto pb-5 " style="color:  #18223d;">
+            <div class="container ">
+                <p style="font-family: monospace;font-weight: 300; font-size:15px;margin: 0px 0px 10p 0px; top: 0; color: #18223d;">Découvrez nos derniers articles de blog sur des thématiques telles que le marketing digital, la transformation numérique, le e-commerce, le référencement naturel, la publicité en ligne ou encore Zoho.</p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+
+
+                        <div class="card ">
+                            <div class="img-box"><img class="card-img-top   container-fluid" src="./images/service_3.jpg " alt="image " style="width:100% "></div>
+                            <div class="card-body ">
+                                <h2 class="card-title ">John Doe</h2>
+                                <p class="card-text ">Some example text some example text. John Doe is an architect and engineer</p>
+                                <a href="# " class=" btn  bttn-projet" style="position:relative;left: 20%;"><span>See Profile</span></a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="carousel-item">
+
+                        <div class="col-md-12 ">
+                            <div class="card ">
+                                <div class="img-box"><img class="card-img-top   container-fluid" src="./images/service_3.jpg " alt="image " style="width:100% "></div>
+                                <div class="card-body ">
+                                    <h2 class="card-title ">John Doe</h2>
+                                    <p class="card-text ">Some example text some example text. John Doe is an architect and engineer</p>
+                                    <a href="# " class=" btn  bttn-projet" style="position:relative;left: 20%;"><span>See Profile</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="carousel-item">
+
+                        <div class="col-md-12 ">
+                            <div class="card ">
+                                <div class="img-box"><img class="card-img-top   container-fluid" src="./images/service_3.jpg " alt="image " style="width:100% "></div>
+                                <div class="card-body ">
+                                    <h2 class="card-title ">John Doe</h2>
+                                    <p class="card-text ">Some example text some example text. John Doe is an architect and engineer</p>
+                                    <a href="# " class=" btn  bttn-projet" style="position:relative;left: 20%;"><span>See Profile</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="carousel-item">
+
+                        <div class="col-md-12 ">
+                            <div class="card ">
+                                <div class="img-box"><img class="card-img-top   container-fluid" src="./images/service_3.jpg " alt="image " style="width:100% "></div>
+                                <div class="card-body ">
+                                    <h2 class="card-title ">John Doe</h2>
+                                    <p class="card-text ">Some example text some example text. John Doe is an architect and engineer</p>
+                                    <a href="# " class=" btn  bttn-projet" style="position:relative;left: 20%;"><span>See Profile</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="carousel-item">
+
+                        <div class="col-md-12 ">
+                            <div class="card ">
+                                <div class="img-box"><img class="card-img-top   container-fluid" src="./images/service_3.jpg " alt="image " style="width:100% "></div>
+                                <div class="card-body ">
+                                    <h2 class="card-title ">John Doe</h2>
+                                    <p class="card-text ">Some example text some example text. John Doe is an architect and engineer</p>
+                                    <a href="# " class=" btn  bttn-projet" style="position:relative;left: 20%;"><span>See Profile</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+{% endblock content %}

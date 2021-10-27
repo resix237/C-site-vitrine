@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Lato:wght@700&family=Montserrat&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,200&display=swap');
+ :root {
+    --primary: #f3ad3b;
+    --secondary: #18223d;
+    --primaryTrans: #f3ac3b23;
+}
+
+body {
+    background: rgb(255, 255, 255);
+}
+
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+}
+
+.carousel-item {
+    height: 75vh;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.carousel-caption {
+    bottom: 35%;
+}
+
+.carousel-caption h5 {
+    font-size: 55px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    margin-top: 25px;
+    font-family: monospace;
+}
+
+.carousel-caption p {
+    width: 60%;
+    margin: auto;
+    font-size: 17px;
+    line-height: 1.9;
+    font-family: poppins;
+}
+
+.carousel-caption a {
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 10px 30px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.navbar-light .navbar-nav a {
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: poppins;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    padding: .2rem 1rem;
+    color: #fff;
+}
+
+.navbar-nav {
+    text-align: center;
+}
+
+.navbar-light .navbar-nav .nav-link:active,
+.navbar-light .navbar-nav .nav-link:focus {
+    color: #f3ad3b;
+}
+
+@media only screen and (max-width:991px) {
+    .navbar-nav.ml-auto {
+        background: rgb(0, 0, 0, 0.5);
+        text-align: left;
+    }
+    .navbar-toggler {
+        padding: 1px 5px;
+        font-size: 18px;
+        line-height: 0.3;
+        background: #f3ad3b;
+        border: 1px solid transparent;
+    }
+    .navbar .container,
+    .navbar .container-fluid,
+    .navbar .container-lg,
+    .navbar .container-md,
+    .navbar .container-sm,
+    .navbar .container-xl {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        height: 80px;
+    }
+    .shrink .nav-link {
+        padding: .2rem 1rem;
+        color: #ffffff !important;
+    }
+}
+
+.shrink {
+    background: rgb(255, 255, 255, 0.8) !important;
+    height: 90px;
+}
+
+.shrink .nav-link {
+    padding: .2rem 1rem;
+    color: #18223d !important;
+}
+
+.shrink .nav-link:hover {
+    color: #f3ad3b !important;
+}
+
+.navbar-collapse {
+    padding-right: 10%;
+}
+
+.navbar .container,
+.navbar .container-fluid,
+.navbar .container-lg,
+.navbar .container-md,
+.navbar .container-sm,
+.navbar .container-xl {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.shrink .navbar.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 75px;
+}
+
+.topBar1 {
+    background: #f3ad3b !important;
+    text-align: right;
+    height: 10px;
+}
+
+.topBar2 {
+    background: #18223d !important;
+    text-align: right;
+    height: 10px;
+}
+
+.btnContact {
+    border-radius: 25px;
+    width: 150px;
+    background: #f3ad3b;
+    border: 1px solid transparent;
+    box-shadow: 5px 0px 12px rgb(59, 59, 59);
+}
+
+
+/*presentation*/
+
+.title_presentation .content_title {
+    height: 400px;
+    width: 80%;
+    position: relative;
+    left: 0px;
+    top: 10px;
+    background: var(--secondary);
+    text-align: right;
+    font-family: monospace;
+    text-transform: uppercase;
+}
+
+.title_presentation .content_title .title_widget-title h1 {
+    color: #18223d;
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.title_presentation .content_title .title_widget-title h1 ::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    height: 2px;
+    right: 5px;
+    width: 40%;
+    background: #f3ad3b;
+}
+
+.contenu_presentation .content_contenu {
+    height: auto;
+    width: 90%;
+    position: relative;
+    margin-top: 20px;
+    background: var(--primaryTrans);
+    text-align: left;
+    font-family: sans-serif;
+    transition: .5s ease-in-out;
+}
+
+.contenu_presentation .content_contenu-2 {
+    height: auto;
+    width: 90%;
+    position: relative;
+    margin-top: 30px;
+    background: var(--secondary);
+    text-align: left;
+    font-family: sans-serif;
+    transition: .5s ease-in-out;
+}
+
+.contenu_presentation .content_contenu h2 {
+    color: #18223d;
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.contenu_presentation .content_contenu-2 h2 {
+    color: white;
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.contenu_presentation .content_contenu .title_widget-contenu h2::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    height: 2px;
+    left: 5px;
+    width: 20%;
+    background: #18223d;
+}
+
+.contenu_presentation .content_contenu-2 .title_widget-contenu h2::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    height: 2px;
+    left: 5px;
+    width: 20%;
+    background: var(--primary);
+}
+
+.contenu_presentation .content_contenu p {
+    color: #18223d;
+    font-size: 25px;
+    font-weight: 200;
+    font-family: poppins;
+}
+
+.contenu_presentation .content_contenu-2 p {
+    color: white;
+    font-size: 25px;
+    font-weight: 200;
+    font-family: 'Nunito', sans-serif;
+}
+
+.contenu_presentation .content_contenu:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 12px rgba(0, 0, 0, .12), 0 4px 12px rgba(0, 0, 0, .06);
+}
+
+.contenu_presentation .content_contenu-2:hover {
+    transform: scale(1.03);
+}
+
+.valeur {
+    z-index: 2;
+    position: relative;
+    background: transparent;
+    width: 50%;
+    top: -100px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.valeur .row .my-valor {
+    background: var(--primary);
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-right: 10px;
+    width: 200px;
+    border-radius: 30px;
+}
+
+.valeur .row .my-valor h2 {
+    color: #18223d;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.valeur .row .my-valor p {
+    color: #4e4f50;
+    font-size: 15px;
+    font-weight: 300;
+    font-family: monospace;
+}
+
+
+/* parti objectif  bas de presentation */
+
+.objectif_cf {
+    margin-bottom: 70px;
+}
+
+.objectif_content {
+    position: relative;
+    left: 90px;
+    width: 60%;
+}
+
+.objectif_cf .title_widget_objectif_cf {
+    text-align: center;
+}
+
+.objectif_cf .title_widget_objectif_cf h2 {
+    color: var(--primary);
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.objectif_content h4 {
+    font-weight: bolder;
+    color: var(--secondary);
+    font-size: 22px;
+}
+
+.objectif_content p {
+    font-weight: 200;
+}
+
+.objectif_content {
+    transition: .5s ease-in-out;
+}
+
+.objectif_content:hover {
+    transform: scale(1.06);
+    box-shadow: 0 10px 12px rgba(0, 0, 0, .12), 0 4px 12px rgba(0, 0, 0, .06);
+}
+
+.presentationBtn {
+    position: relative;
+    left: 25%;
+    right: 25%;
+}
+
+@media only screen and (max-device-width: 960px) {
+    /* styles for browsers larger than 960px; */
+}
+
+@media only screen and (min-width: 1440px) {
+    /* styles for browsers larger than 1440px; */
+}
+
+@media only screen and (min-width: 2000px) {
+    /* for sumo sized (mac) screens */
+}
+
+@media only screen and (max-device-width: 581px) {
+    /* styles for mobile browsers smaller than 480px; (iPhone) */
+    .objectif_content {
+        width: 100%;
+    }
+}
+
+@media only screen and (device-width: 768px) {
+    /* default iPad screens */
+}
+
+
+/* different techniques for iPad screening */
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+    /* For portrait layouts only */
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+    /* For landscape layouts only */
+}

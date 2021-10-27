@@ -1,0 +1,15 @@
+{% extends 'admin/base.html' %} {% load static%} {% block branding %}
+<h1 id="head">
+    <a href="{% url 'home'%}" style="color: #18223d;font-weight: bolder;">
+        <img src="{% static 'main/images/logo_cf.png'%}" alt=""> home
+    </a>
+
+
+</h1>
+
+
+{% endblock branding %} {% block extrastyle%}
+
+
+
+<link rel="stylesheet" href="{% static 'admin/css/adminstyle.css'%}"> {%endblock extrastyle%}

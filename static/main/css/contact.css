@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,200&display=swap');
+:root {
+    --primary: #f3ad3b;
+    --secondary: #18223d;
+    --primaryTrans: #f3ac3b23;
+    --secondaryTrans: #18223d5b;
+}
+
+.contact-presentation {
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.contact-presentation p {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+    font-size: 25px;
+}
+
+.contact-presentation .img_contact {
+    margin: 10px 0px 10px 20px;
+}
+
+.contact-presentation .img_contact i {
+    font-size: 300px;
+    color: var(--primary)
+}
+
+.contact_principale {
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+
+.contact_principale .img-valor {
+    text-align: center;
+}
+
+.contact_principale i {
+    font-size: 90px;
+    color: var(--secondary)
+}
+
+.contact_principale .content-text-valor {
+    margin: 20px 0 20px 0;
+}
+
+.contact_principale .content-text-valor h2 {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.contact_principale .contact_element {
+    background: var(--primaryTrans);
+    border-radius: 30px;
+    width: 95%;
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+.offset::before {
+    display: block;
+    content: "";
+    height: 6rem;
+}

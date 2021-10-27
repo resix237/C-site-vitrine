@@ -1,0 +1,9 @@
+@media only screen and (min-width: 960px) {
+    .featured-case-studies .cstudy-card__content {
+        position: relative;
+        width: calc(100% - 3rem);
+        margin-left: 3rem;
+        margin-top: -4.5rem;
+        z-index: 2;
+    }
+}

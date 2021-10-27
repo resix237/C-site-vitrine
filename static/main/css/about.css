@@ -1,0 +1,173 @@
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+    /*#about .row {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, .08), 0 0 12px rgba(0, 0, 0, .05);
+        transition: .3s transform cubic-bezier(.155, 1.105, .295, 1.12), .3s box-shadow, .3s -webkit-transform cubic-bezier(.155, 1.105, .295, 1.12);
+        border-radius: 20px;
+    }
+    */
+    
+    #about p {
+        padding: 10px;
+    }
+    
+    .imageCF {
+        border-radius: 50%;
+        height: 650px;
+        margin: ;
+        padding: 0px;
+        transition: .5s ease-in-out;
+        width: 100%;
+    }
+    
+    .imageCF:hover {
+        filter: grayscale(90%);
+        transform: scale(1.05);
+        box-shadow: 0 10px 12px rgba(0, 0, 0, .12), 0 4px 12px rgba(0, 0, 0, .06);
+    }
+    
+    .aboutButton {
+        border: 2px solid #18223d;
+        border-radius: 20px;
+        width: 50%;
+        padding: 15px 22px;
+        margin-top: 10px;
+        transition: .5s ease-in-out;
+    }
+    
+    #about a {
+        text-align: center;
+        position: relative;
+        padding: 1em 5.8em;
+        bottom: 20px;
+    }
+    
+    .aboutButton:hover {
+        border: 2px transparent;
+        background: #f3ad3b;
+        width: 55%;
+    }
+    
+    .aboutButton span {
+        color: #18223d;
+        text-decoration: none;
+        font-size: 1em;
+        font-weight: bolder;
+    }
+    
+    .about-widget-heading h2 {
+        color: #18223d;
+        font-size: 30px;
+        font-weight: 800;
+        margin-bottom: 20px;
+        position: relative;
+    }
+    
+    .about-widget-heading h2::before {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        height: 2px;
+        width: 100px;
+        background: #f3ad3b;
+    }
+    
+    .banier-valor .content-text {
+        position: relative;
+        margin-top: 15px;
+        height: 200px;
+        display: block;
+    }
+    
+    .banier-valor .content-text p {
+        color: rgb(94, 96, 99);
+        font-family: 'Open Sans', sans-serif;
+        letter-spacing: 2px;
+        font-weight: 600;
+    }
+    
+    .banier-valor {
+        position: relative;
+        background: #f3ac3b5e;
+        overflow: hidden;
+    }
+    
+    .banier-valor {
+        z-index: 1;
+        background: center / 300px 300px no-repeat url(../images/banier-valor.png), rgb(243 173 59 / 53%);
+        height: 200px;
+    }
+    
+    .demo_wrap:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        opacity: 0.6;
+        background-image: url('https://assets.digitalocean.com/labs/images/community_bg.png');
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        background-size: cover;
+    }
+    
+    .banier-valor h2 {
+        color: #18223d;
+        font-size: 30px;
+        font-weight: 800;
+        margin-bottom: 20px;
+        position: relative;
+    }
+    
+    .banier-valor h2::before {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        height: 2px;
+        width: 100px;
+        background: #18223d;
+    }
+    /*newletter */
+    
+    .newLetter {
+        z-index: 2;
+        position: relative;
+        width: 45%;
+        background: #18223d;
+        top: -50px;
+        text-align: center;
+        border-radius: 20px;
+    }
+    
+    .newLetter .content-text {
+        margin-top: 30px;
+        display: block;
+    }
+    
+    .newLetter .content-text h2 {
+        color: #f3ad3b !important;
+        font-weight: bolder;
+        font-size: 25px;
+        font-family: monospace;
+    }
+    
+    .newLetter .content-text p {
+        color: white !important;
+        font-weight: 10;
+        letter-spacing: 2px;
+        font-size: 10px;
+        text-transform: uppercase;
+        font-family: monospace;
+    }
+    
+    .newLetter .content-form {
+        margin-top: 30px;
+        display: block;
+    }
+    
+    .bg-service {
+        z-index: -1;
+        background: right 10px/ 300px 300px no-repeat url(../images/servce_illustration.png), white;
+    }
